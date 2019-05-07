@@ -1,0 +1,3 @@
+PageResources getPageResources() {
+    return pageResources;
+}

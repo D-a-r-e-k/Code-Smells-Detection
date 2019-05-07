@@ -1,0 +1,3 @@
+public HSLFException() {
+    super();
+}

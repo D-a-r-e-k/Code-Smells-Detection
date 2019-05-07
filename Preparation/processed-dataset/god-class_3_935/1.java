@@ -1,0 +1,3 @@
+ModelDocumentation getDocumentation() {
+    return documentation;
+}

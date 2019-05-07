@@ -1,0 +1,3 @@
+Version getPluginVersion() {
+    return pluginVersion;
+}

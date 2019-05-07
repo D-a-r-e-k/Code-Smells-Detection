@@ -1,0 +1,3 @@
+boolean isAggregate() {
+    return isAggregate;
+}

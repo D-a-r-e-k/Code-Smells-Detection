@@ -1,0 +1,3 @@
+String getName() {
+    return name;
+}

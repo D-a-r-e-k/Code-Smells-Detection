@@ -1,0 +1,3 @@
+void setAggregate() {
+    isAggregate = true;
+}

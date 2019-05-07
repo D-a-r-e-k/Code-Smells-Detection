@@ -1,0 +1,3 @@
+String getPluginId() {
+    return pluginId;
+}

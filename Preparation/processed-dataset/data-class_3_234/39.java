@@ -1,0 +1,88 @@
+/**
+     * @param w Writer to print to.
+     */
+private void standardReportTo(PrintWriter w) {
+    int allCount = allQueues.size();
+    int inProcessCount = inProcessQueues.uniqueSet().size();
+    int readyCount = readyClassQueues.size();
+    int snoozedCount = snoozedClassQueues.size();
+    int activeCount = inProcessCount + readyCount + snoozedCount;
+    int inactiveCount = inactiveQueues.size();
+    int retiredCount = retiredQueues.size();
+    int exhaustedCount = allCount - activeCount - inactiveCount - retiredCount;
+    w.print("Frontier report - ");
+    w.print(ArchiveUtils.get12DigitDate());
+    w.print("\n");
+    w.print(" Job being crawled: ");
+    w.print(controller.getOrder().getCrawlOrderName());
+    w.print("\n");
+    w.print("\n -----===== STATS =====-----\n");
+    w.print(" Discovered:    ");
+    w.print(Long.toString(discoveredUriCount()));
+    w.print("\n");
+    w.print(" Queued:        ");
+    w.print(Long.toString(queuedUriCount()));
+    w.print("\n");
+    w.print(" Finished:      ");
+    w.print(Long.toString(finishedUriCount()));
+    w.print("\n");
+    w.print("  Successfully: ");
+    w.print(Long.toString(succeededFetchCount()));
+    w.print("\n");
+    w.print("  Failed:       ");
+    w.print(Long.toString(failedFetchCount()));
+    w.print("\n");
+    w.print("  Disregarded:  ");
+    w.print(Long.toString(disregardedUriCount()));
+    w.print("\n");
+    w.print("\n -----===== QUEUES =====-----\n");
+    w.print(" Already included size:     ");
+    w.print(Long.toString(alreadyIncluded.count()));
+    w.print("\n");
+    w.print("               pending:     ");
+    w.print(Long.toString(alreadyIncluded.pending()));
+    w.print("\n");
+    w.print("\n All class queues map size: ");
+    w.print(Long.toString(allCount));
+    w.print("\n");
+    w.print("             Active queues: ");
+    w.print(activeCount);
+    w.print("\n");
+    w.print("                    In-process: ");
+    w.print(inProcessCount);
+    w.print("\n");
+    w.print("                         Ready: ");
+    w.print(readyCount);
+    w.print("\n");
+    w.print("                       Snoozed: ");
+    w.print(snoozedCount);
+    w.print("\n");
+    w.print("           Inactive queues: ");
+    w.print(inactiveCount);
+    w.print("\n");
+    w.print("            Retired queues: ");
+    w.print(retiredCount);
+    w.print("\n");
+    w.print("          Exhausted queues: ");
+    w.print(exhaustedCount);
+    w.print("\n");
+    w.print("\n -----===== IN-PROCESS QUEUES =====-----\n");
+    @SuppressWarnings("unchecked") Collection<WorkQueue> inProcess = inProcessQueues;
+    ArrayList<WorkQueue> copy = extractSome(inProcess, REPORT_MAX_QUEUES);
+    appendQueueReports(w, copy.iterator(), copy.size(), REPORT_MAX_QUEUES);
+    w.print("\n -----===== READY QUEUES =====-----\n");
+    appendQueueReports(w, this.readyClassQueues.iterator(), this.readyClassQueues.size(), REPORT_MAX_QUEUES);
+    w.print("\n -----===== SNOOZED QUEUES =====-----\n");
+    copy = extractSome(snoozedClassQueues, REPORT_MAX_QUEUES);
+    appendQueueReports(w, copy.iterator(), copy.size(), REPORT_MAX_QUEUES);
+    WorkQueue longest = longestActiveQueue;
+    if (longest != null) {
+        w.print("\n -----===== LONGEST QUEUE =====-----\n");
+        longest.reportTo(w);
+    }
+    w.print("\n -----===== INACTIVE QUEUES =====-----\n");
+    appendQueueReports(w, this.inactiveQueues.iterator(), this.inactiveQueues.size(), REPORT_MAX_QUEUES);
+    w.print("\n -----===== RETIRED QUEUES =====-----\n");
+    appendQueueReports(w, this.retiredQueues.iterator(), this.retiredQueues.size(), REPORT_MAX_QUEUES);
+    w.flush();
+}

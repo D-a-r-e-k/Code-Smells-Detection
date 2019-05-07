@@ -1,0 +1,3 @@
+String getParentPluginId() {
+    return parentPluginId;
+}

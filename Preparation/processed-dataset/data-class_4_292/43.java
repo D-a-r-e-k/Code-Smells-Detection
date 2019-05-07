@@ -1,0 +1,3 @@
+ColumnSchema getColumn() {
+    return null;
+}

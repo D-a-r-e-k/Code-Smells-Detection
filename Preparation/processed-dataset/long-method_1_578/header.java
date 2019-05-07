@@ -1,0 +1,37 @@
+void method0() { 
+public static final int MPEG_Version_2_5 = 0;
+public static final int MPEG_Version_2 = 2;
+public static final int MPEG_Version_1 = 3;
+public static final int MPEG_Layer_3 = 1;
+public static final int MPEG_Layer_2 = 2;
+public static final int MPEG_Layer_1 = 3;
+public static final int CHANNEL_MODE_STEREO = 0;
+public static final int CHANNEL_MODE_JOINT_STEREO = 1;
+public static final int CHANNEL_MODE_DUAL_CHANNEL = 2;
+public static final int CHANNEL_MODE_MONO = 3;
+public static final int EMPHASIS_NONE = 0;
+public static final int EMPHASIS_50_15_MS = 1;
+public static final int EMPHASIS_RESERVED = 2;
+public static final int EMPHASIS_CCIT_J17 = 3;
+protected static final int[] MPEG1BitRates = { 0, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000, 0 };
+protected static final int[] MPEG2BitRates = { 0, 8000, 16000, 24000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 144000, 160000, 0 };
+protected static final int[] MPEG10SampleRates = { 44100, 48000, 32000, 0 };
+protected static final int[] MPEG20SampleRates = { 22050, 24000, 16000, 0 };
+protected static final int[] MPEG25SampleRates = { 11025, 12000, 8000, 0 };
+private static int FRAME_SAMPLES_MPEG_1 = 1152;
+private static int FRAME_SAMPLES_MPEG_2 = 576;
+protected int mpegVersion;
+protected int mpegLayer;
+protected boolean isProtected;
+protected int bitRate;
+protected int sampleRate;
+protected boolean padded;
+protected int channelMode;
+protected int modeExtension;
+protected boolean copyrighted;
+protected boolean original;
+protected int emphasis;
+protected byte[] data;
+protected int bit_rate;
+protected int sample_rate;
+}

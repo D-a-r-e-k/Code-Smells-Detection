@@ -1,0 +1,3 @@
+int getParameterSignature() {
+    return typeGroups;
+}

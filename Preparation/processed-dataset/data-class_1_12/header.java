@@ -1,0 +1,21 @@
+void method0() { 
+public String OriginalHTML;
+public int Row;
+public int Column;
+public String OverwriteCellBody;
+public String AddToCellBody;
+public String OverwriteCellTag;
+public String OverwriteEndCellTag;
+public String AddToCellTag;
+public String OverwriteRowTag;
+public String OverwriteEndRowTag;
+public String AddToRowTag;
+public String OverwriteTableTag;
+public String OverwriteEndTableTag;
+public String AddToTableTag;
+public String AddCellFollowing;
+public String RemoveFollowingCell;
+public String AddRowFollowing;
+public String RemoveFollowingRow;
+public String AddTableFollowing;
+}

@@ -1,0 +1,3 @@
+PdfEncryption getDecrypt() {
+    return decrypt;
+}

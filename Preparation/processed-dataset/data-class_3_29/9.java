@@ -1,0 +1,3 @@
+ParameterType getType() {
+    return type;
+}

@@ -1,0 +1,3 @@
+boolean isDynamicParam() {
+    return false;
+}

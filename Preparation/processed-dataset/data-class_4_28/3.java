@@ -1,0 +1,3 @@
+ExtensionMultiplicity getExtensionMultiplicity() {
+    return extensionMultiplicity;
+}

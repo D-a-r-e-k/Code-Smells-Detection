@@ -1,0 +1,3 @@
+ParameterMultiplicity getMultiplicity() {
+    return multiplicity;
+}

@@ -1,0 +1,31 @@
+void method0() { 
+private ObjectInfo light[];
+private FormContainer configPanel;
+private BCheckBox transparentBox, adaptiveBox, hideBackfaceBox, hdrBox;
+private BComboBox shadeChoice, aliasChoice, sampleChoice;
+private ValueField errorField, smoothField;
+private int imagePixel[], width, height, envMode, imageWidth, imageHeight;
+private int shadingMode = PHONG, samplesPerPixel = 1, subsample = 1;
+private Fragment fragment[];
+private long updateTime;
+private MemoryImageSource imageSource;
+private Scene theScene;
+private Camera theCamera;
+private RenderListener listener;
+private Image img;
+private Thread renderThread;
+private RGBColor ambColor, envColor, fogColor;
+private TextureMapping envMapping;
+private ThreadLocal threadRasterContext, threadCompositingContext;
+private RowLock lock[];
+private double envParamValue[];
+private double time, smoothing = 1.0, smoothScale, focalDist, surfaceError = 0.02, fogDist;
+private boolean fog, transparentBackground = false, adaptive = true, hideBackfaces = true, generateHDR = false, positionNeeded, depthNeeded, needCopyToUI = true;
+public static final int GOURAUD = 0;
+public static final int HYBRID = 1;
+public static final int PHONG = 2;
+public static final double TOL = 1e-12;
+public static final float INTENSITY_CUTOFF = 0.005f;
+public static final Fragment BACKGROUND_FRAGMENT = new OpaqueFragment(0, Float.MAX_VALUE);
+private static final int WHITE_ERGB = new RGBColor(1.0f, 1.0f, 1.0f).getERGB();
+}

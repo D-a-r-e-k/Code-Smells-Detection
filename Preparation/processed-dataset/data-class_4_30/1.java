@@ -1,0 +1,3 @@
+MatchingRule getMatchingRule() {
+    return matchingRule;
+}

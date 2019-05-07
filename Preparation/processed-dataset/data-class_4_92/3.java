@@ -1,0 +1,3 @@
+String getObject() {
+    return object;
+}

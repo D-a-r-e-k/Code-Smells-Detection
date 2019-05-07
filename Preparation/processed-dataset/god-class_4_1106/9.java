@@ -1,0 +1,31 @@
+public boolean recordConfiguration() {
+    maxRayDepth = (int) rayDepthField.getValue();
+    minRayIntensity = (float) rayCutoffField.getValue();
+    stepSize = stepSizeField.getValue();
+    smoothing = smoothField.getValue();
+    extraGISmoothing = extraGIField.getValue();
+    extraGIEnvSmoothing = extraGIEnvField.getValue();
+    adaptive = adaptiveBox.getState();
+    roulette = rouletteBox.getState();
+    surfaceError = errorField.getValue();
+    antialiasLevel = aliasChoice.getSelectedIndex();
+    depth = depthBox.getState();
+    gloss = glossBox.getState();
+    penumbra = shadowBox.getState();
+    minRays = Integer.parseInt((String) minRaysChoice.getSelectedValue());
+    maxRays = Integer.parseInt((String) maxRaysChoice.getSelectedValue());
+    transparentBackground = transparentBox.getState();
+    generateHDR = hdrBox.getState();
+    giMode = giModeChoice.getSelectedIndex();
+    diffuseRays = Integer.parseInt((String) diffuseRaysChoice.getSelectedValue());
+    globalPhotons = (int) globalPhotonsField.getValue();
+    globalNeighborPhotons = (int) globalNeighborPhotonsField.getValue();
+    caustics = causticsBox.getState();
+    causticsPhotons = (int) causticsPhotonsField.getValue();
+    causticsNeighborPhotons = (int) causticsNeighborPhotonsField.getValue();
+    scatterMode = scatterModeChoice.getSelectedIndex();
+    volumePhotons = (int) volumePhotonsField.getValue();
+    volumeNeighborPhotons = (int) volumeNeighborPhotonsField.getValue();
+    reducedMemory = reducedMemoryBox.getState();
+    return true;
+}

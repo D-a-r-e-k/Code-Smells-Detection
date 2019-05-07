@@ -1,0 +1,32 @@
+public Map<String, Object> getConfiguration() {
+    HashMap<String, Object> map = new HashMap<String, Object>();
+    map.put("maxRayDepth", maxRayDepth);
+    map.put("minRayIntensity", minRayIntensity);
+    map.put("materialStepSize", stepSize);
+    map.put("textureSmoothing", smoothing);
+    map.put("extraGISmoothing", extraGISmoothing);
+    map.put("extraGIEnvSmoothing", extraGIEnvSmoothing);
+    map.put("reduceAccuracyForDistant", adaptive);
+    map.put("russianRouletteSampling", roulette);
+    map.put("useLessMemory", reducedMemory);
+    map.put("maxSurfaceError", surfaceError);
+    map.put("antialiasing", antialiasLevel);
+    map.put("depthOfField", depth);
+    map.put("gloss", gloss);
+    map.put("softShadows", penumbra);
+    map.put("minRaysPerPixel", minRays);
+    map.put("maxRaysPerPixel", maxRays);
+    map.put("transparentBackground", transparentBackground);
+    map.put("highDynamicRange", generateHDR);
+    map.put("globalIlluminationMode", giMode);
+    map.put("raysToSampleEnvironment", diffuseRays);
+    map.put("globalIlluminationPhotons", globalPhotons);
+    map.put("globalIlluminationPhotonsInEstimate", globalNeighborPhotons);
+    map.put("caustics", caustics);
+    map.put("causticsPhotons", causticsPhotons);
+    map.put("causticsPhotonsInEstimate", causticsNeighborPhotons);
+    map.put("scatteringMode", scatterMode);
+    map.put("scatteringPhotons", volumePhotons);
+    map.put("scatteringPhotonsInEstimate", volumeNeighborPhotons);
+    return map;
+}

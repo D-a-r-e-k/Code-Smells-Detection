@@ -1,0 +1,3 @@
+boolean isSelfAggregate() {
+    return false;
+}

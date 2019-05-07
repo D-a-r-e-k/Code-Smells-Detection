@@ -1,0 +1,35 @@
+public Properties getConfiguration() {
+    Properties config = new Properties();
+    config.put("CAPTION", KEY_TITLE);
+    config.put(KEY_INIT_TEMPERATURE, String.valueOf(getInitTemperature()));
+    config.put(KEY_MIN_TEMPERATURE, String.valueOf(getMinTemperature()));
+    config.put(KEY_MIN_DISTANCE, String.valueOf(getMinDistance()));
+    config.put(KEY_TEMP_SCALE_FACTOR, String.valueOf(getTemperatureScaleFactor()));
+    config.put(KEY_COMPUTE_PERMUTATION, String.valueOf(getComputePermutation()));
+    config.put(KEY_IS_UPHILL_MOVE_ALLOWED, String.valueOf(getUphillMovesAllowed()));
+    config.put(KEY_MAX_ROUNDS, String.valueOf(getMaxRounds()));
+    config.put(KEY_TRIES_PER_CELL, String.valueOf(getTriesPerCell()));
+    config.put(KEY_COST_FUNCTION_CONFIG, String.valueOf(Integer.toBinaryString(getCostFunctionConfiguration())));
+    config.put(KEY_LAMBDA, getLambda());
+    config.put(KEY_BOUNDS, getResultBounds());
+    config.put(KEY_LAYOUT_UPDATE_ENABLED, String.valueOf(getLayoutUpdateEnabled()));
+    config.put(KEY_LAYOUT_UPDATE_INIT_TEMPERATURE, String.valueOf(getLayoutUpdateInitTemperature()));
+    config.put(KEY_LAYOUT_UPDATE_MIN_TEMPERATURE, String.valueOf(getLayoutUpdateMinTemperature()));
+    config.put(KEY_LAYOUT_UPDATE_MIN_DISTANCE, String.valueOf(getLayoutUpdateMinDistance()));
+    config.put(KEY_LAYOUT_UPDATE_TEMP_SCALE_FACTOR, String.valueOf(getLayoutUpdateTemperatureScaleFactor()));
+    config.put(KEY_LAYOUT_UPDATE_COMPUTE_PERMUTATION, String.valueOf(getLayoutUpdateComputePermutation()));
+    config.put(KEY_LAYOUT_UPDATE_IS_UPHILL_MOVE_ALLOWED, String.valueOf(getLayoutUpdateUphillMovesAllowed()));
+    config.put(KEY_LAYOUT_UPDATE_MAX_ROUNDS, String.valueOf(getLayoutUpdateMaxRounds()));
+    config.put(KEY_LAYOUT_UPDATE_TRIES_PER_CELL, String.valueOf(getLayoutUpdateTriesPerCell()));
+    config.put(KEY_LAYOUT_UPDATE_COST_FUNCTION_CONFIG, String.valueOf(Integer.toBinaryString(getLayoutUpdateCostFunctionConfiguration())));
+    config.put(KEY_LAYOUT_UPDATE_LAMBDA, getLayoutUpdateLambda());
+    config.put(KEY_LAYOUT_UPDATE_BOUNDS, getLayoutUpdateResultBounds());
+    config.put(KEY_LAYOUT_UPDATE_METHOD, getLayoutUpdateMethod());
+    config.put(KEY_LAYOUT_UPDATE_METHOD_NEIGHBORS_DEPTH, String.valueOf(getLayoutUpdateMethodNeighborsDepth()));
+    config.put(KEY_LAYOUT_UPDATE_METHOD_PERIMETER_RADIUS, String.valueOf(getLayoutUpdateMethodPerimeterRadius()));
+    config.put(KEY_LAYOUT_UPDATE_METHOD_PERIMETER_RADIUS_INCREASE, String.valueOf(getLayoutUpdateMethodPerimeterRadiusIncrease()));
+    config.put(KEY_LAYOUT_UPDATE_CLUSTERING_ENABLED, String.valueOf(getLayoutUpdateClusteringEnabled()));
+    config.put(KEY_LAYOUT_UPDATE_CLUSTERING_FACTOR, String.valueOf(getLayoutUpdateClusteringFactor()));
+    config.put(KEY_LAYOUT_UPDATE_CLUSTERING_MOVE_SCALE, String.valueOf(getLayoutUpdateClusteringMoveScaleFactor()));
+    return config;
+}

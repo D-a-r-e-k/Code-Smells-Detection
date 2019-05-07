@@ -1,0 +1,3 @@
+String getVersion() {
+    return version;
+}
