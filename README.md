@@ -11,4 +11,4 @@ dataset was adopted from http://essere.disco.unimib.it/wiki/research/mlcsd
 Feed forward neural network is trained based on features extracted from a processed dataset using LSTM (https://github.com/D-a-r-e-k/Source-Code-Modelling) / Code2Vec (https://github.com/tech-srl/code2vec)
 
 This work is based on Master thesis "Code smells detection using automatic source code features learning"
-Summary (in Lithuanian) is published in Vilnius University Proceedings „Lietuvos magistrantų informatikos ir IT tyrimai“ (11th page)
+Summary (in Lithuanian) is published in Vilnius University Proceedings „Lietuvos magistrantų informatikos ir IT tyrimai“ (http://www.journals.vu.lt/proceedings/issue/view/1129, 11th page)
